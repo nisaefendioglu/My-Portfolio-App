@@ -138,7 +138,7 @@ class SnakeButton extends StatefulWidget {
   const SnakeButton({
     Key? key,
     required this.child,
-    this.duration = const Duration(milliseconds: 1200),
+    this.duration = const Duration(seconds: 1500),
     this.borderWidth = 5.0,
     this.borderColor = Colors.white,
     this.snakeColor = Colors.purple,
