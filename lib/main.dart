@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:vector_math/vector_math_64.dart' as vector;
+import 'package:getwidget/getwidget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: "Nisa's Portfolio",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.purple,
       ),
       home: MyHomePage(),
     );
@@ -43,54 +45,96 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
           ),
-          Padding(
-              padding: const EdgeInsets.all(110.0),
+          Container(
+              margin: const EdgeInsets.only(top: 80.0, left: 100),
               child: CircleAvatar(
                 radius: 80,
-                backgroundColor: Color(0xFFb936b9),
+                backgroundColor: Colors.white38,
                 backgroundImage: AssetImage("assets/me.png"),
               )),
-          Center(
-            child: Text(
-              "Hi There 👋 \nMy name is Nisa Efendioğlu, \nI’m Software Developer. ",
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 15),
+          Container(
+            margin: const EdgeInsets.only(bottom: 100.0),
+            child: Center(
+              child: Text(
+                "    Hi There 👋 \nMy name is Nisa Efendioğlu, \nI’m Software Developer. ",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+              ),
             ),
           ),
           new Container(
-            margin: const EdgeInsets.only(top: 320.0),
+            margin: const EdgeInsets.only(top: 20.0, left: 10),
             child: Padding(
-              padding: const EdgeInsets.all(60.0),
-              child: Column(
+              padding: const EdgeInsets.all(70.0),
+              child: Row(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
-                  SnakeButton(
-                    child: Text(
-                      "Github",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 17,
+                  IconButton(
+                    icon: CircleAvatar(
+                      backgroundColor: Colors.white60,
+                      child: FaIcon(
+                        FontAwesomeIcons.github,
+                        color: Colors.black,
                       ),
                     ),
-                    onTap: () => launch('https://github.com/nisaefendioglu'),
+                    onPressed: () {
+                      launch('https://github.com/nisaefendioglu');
+                    },
+                  ),
+                  IconButton(
+                    icon: CircleAvatar(
+                      backgroundColor: Colors.white60,
+                      child: FaIcon(
+                        FontAwesomeIcons.stackOverflow,
+                        color: Colors.black,
+                      ),
+                    ),
+                    onPressed: () {
+                      launch(
+                          'https://stackoverflow.com/users/11902787/nisa-efendioglu');
+                    },
+                  ),
+                  IconButton(
+                    icon: CircleAvatar(
+                      backgroundColor: Colors.white60,
+                      child: FaIcon(
+                        FontAwesomeIcons.twitter,
+                        color: Colors.black,
+                      ),
+                    ),
+                    onPressed: () {
+                      launch('https://www.twitter.com/nisaefendioglu/');
+                    },
+                  ),
+                  IconButton(
+                    icon: CircleAvatar(
+                      backgroundColor: Colors.white60,
+                      child: FaIcon(
+                        FontAwesomeIcons.instagram,
+                        color: Colors.black,
+                      ),
+                    ),
+                    onPressed: () {
+                      launch('https://www.instagram.com/nisaefendiogluu/');
+                    },
                   ),
                 ],
               ),
             ),
           ),
           new Container(
-            margin: const EdgeInsets.only(top: 380.0),
+            margin: const EdgeInsets.only(top: 360.0),
             child: Padding(
-              padding: const EdgeInsets.all(60.0),
+              padding: const EdgeInsets.all(50.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
                   SnakeButton(
                     child: Text(
-                      "Blog",
+                      "🌐 Web Site",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 17,
+                        fontSize: 15,
                       ),
                     ),
                     onTap: () => launch('https://nisaefendioglu.blog'),
@@ -100,22 +144,21 @@ class MyHomePage extends StatelessWidget {
             ),
           ),
           new Container(
-            margin: const EdgeInsets.only(top: 440.0),
+            margin: const EdgeInsets.only(top: 420.0),
             child: Padding(
-              padding: const EdgeInsets.all(60.0),
+              padding: const EdgeInsets.all(50.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
                   SnakeButton(
                     child: Text(
-                      "LinkedIn",
+                      "📩 nisaefendioglu0@gmail.com",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 17,
+                        fontSize: 15,
                       ),
                     ),
-                    onTap: () =>
-                        launch('https://www.linkedin.com/in/nisaefendioglu/'),
+                    onTap: () {},
                   ),
                 ],
               ),
@@ -138,7 +181,7 @@ class SnakeButton extends StatefulWidget {
   const SnakeButton({
     Key? key,
     required this.child,
-    this.duration = const Duration(seconds: 1500),
+    this.duration = const Duration(milliseconds: 1500),
     this.borderWidth = 5.0,
     this.borderColor = Colors.white,
     this.snakeColor = Colors.purple,
