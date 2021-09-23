@@ -70,8 +70,7 @@ import 'package:getwidget/getwidget.dart';
 
 ## Screenshots of the project :
 
-
-
+![WhatsApp Image 2021-09-23 at 14 30 08](https://user-images.githubusercontent.com/48391281/134499985-43b35df0-9621-4d1e-85f3-132ac1a2bba0.jpeg)
 
 ## License
 ```
