@@ -72,6 +72,11 @@ import 'package:getwidget/getwidget.dart';
 
 ![WhatsApp Image 2021-09-23 at 14 30 08](https://user-images.githubusercontent.com/48391281/134499985-43b35df0-9621-4d1e-85f3-132ac1a2bba0.jpeg)
 
+## Demo Application
+
+[![Get it on Google Play](https://play.google.com/intl/en_us/badges/images/badge_new.png)](https://play.google.com/store/apps/details?id=com.nisaefendioglu.portfolio)
+
+
 ## License
 ```
 
